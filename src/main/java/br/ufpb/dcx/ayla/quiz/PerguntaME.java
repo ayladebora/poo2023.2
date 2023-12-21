@@ -51,4 +51,12 @@ public class PerguntaME extends Pergunta {
     public boolean estahCorretaResposta(String resposta) {
         return (resposta.startsWith(super.getRespostaCorreta()));
     }
+
+    public String toString(){
+        String texto = this.getEnunciado() + "\n";
+        for (String s: this.alternativas){
+            texto+=s+"\n";
+        }
+        return texto;
+    }
 }
